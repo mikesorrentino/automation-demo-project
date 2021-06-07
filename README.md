@@ -1,2 +1,3 @@
-# automation-demo-project
+# Automation-demo-project
+
 Automation project using spring, selenium and TestNG
