@@ -21,6 +21,9 @@
 		<selenium.version>3.141.59</selenium.version>
 		<spring-data-jpa.version>2.5.0</spring-data-jpa.version>
 		<testng.version>7.1.0</testng.version>
+		<cucumberjava.version>6.8.0</cucumberjava.version>
+		<cucumberspring.version>6.8.0</cucumberspring.version>
+		<cucumberjunit.version>6.8.0</cucumberjunit.version>
 	</properties>
 
 
@@ -57,6 +60,24 @@
 			<version>${spring-data-jpa.version}</version> </dependency> <dependency> 
 			<groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-data-jpa</artifactId> 
 			</dependency> -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>${cucumberjava.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>${cucumberjunit.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-spring</artifactId>
+			<version>${cucumberspring.version}</version>
+			<scope>test</scope>
+		</dependency>
 
 	</dependencies>
 
