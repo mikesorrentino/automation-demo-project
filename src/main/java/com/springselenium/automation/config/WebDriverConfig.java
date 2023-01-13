@@ -11,7 +11,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.springframework.context.annotation.Scope;
 
 @Configuration
 public class WebDriverConfig {
@@ -27,7 +26,7 @@ public class WebDriverConfig {
 	}
 	
 	@Bean
-	@ConditionalOnProperty(name = "broser", havingValue = "firefox")
+	@ConditionalOnProperty(name = "browser", havingValue = "firefox")
 	public WebDriver firefoxDriver() {
 		WebDriverManager.firefoxdriver().setup();
 		return new FirefoxDriver();

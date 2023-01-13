@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = {"src/test/java/com/springselenium/automation/cucumber/features"},
-        glue = {"com.springselenium.automation.cucumber"} //"com.springselenium.automation.cucumber.steps",
+        glue = {"com.springselenium.automation.cucumber"}
 )
 public class MainRunner {
 }
