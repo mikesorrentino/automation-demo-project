@@ -1,28 +1,24 @@
 package com.springselenium.automation.pages.google;
 
+import com.springselenium.automation.pages.AbstractPage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-
-import com.springselenium.automation.pages.AbstractPage;
 
 @Component
 public class GooglePage extends AbstractPage {
 
 	@Value("${application.url}")
 	private String url;
-	
-	@FindBy(name = "q")
-	private WebElement searchBox;
-	
-	@FindBy(name = "btnK")
-	private WebElement searchBtn;
-	
+
+	private final By searchBox = By.name("q");
+
+	private final By searchBtn = By.name("btnK");
+
 	@Override
 	public boolean isAt() {
-		return wait.until((d) -> searchBox.isDisplayed());
+		return wait.until((d) -> driver.findElement(searchBox).isDisplayed());
 	}
 	
 	public void goTo() {
@@ -30,11 +26,11 @@ public class GooglePage extends AbstractPage {
 	}
 
 	public void search(String search) {
-		searchBox.sendKeys(search);
+		driver.findElement(searchBox).sendKeys(search);
 	}
 
 	public void clickSearch() {
-		searchBox.sendKeys(Keys.ENTER);
+		driver.findElement(searchBox).sendKeys(Keys.ENTER);
 	}
 	
 	public void quit() {
