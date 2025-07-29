@@ -28,6 +28,8 @@ public class WebDriverConfig {
 		chromeOptions.setExperimentalOption("prefs", chromePrefs);
 		chromeOptions.addArguments("--remote-allow-origins=*");
 		chromeOptions.addArguments("start-maximized");
+		chromePrefs.put("autofill.profile_enabled", false);
+		chromePrefs.put("profile.password_manager_leak_detection", false);
 		chromeOptions.setExperimentalOption("prefs", chromePrefs);
 
 		WebDriverManager.chromedriver().clearDriverCache().setup();
