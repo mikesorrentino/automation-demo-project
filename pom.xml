@@ -16,18 +16,21 @@
 	<description>Demo project for Spring and Selenium</description>
 
 	<properties>
-		<java.version>11</java.version>
-		<webdrivermanager.version>4.4.3</webdrivermanager.version>
-		<selenium.version>3.141.59</selenium.version>
-		<spring-data-jpa.version>2.5.0</spring-data-jpa.version>
+		<java.version>17</java.version>
+		<webdrivermanager.version>6.0.1</webdrivermanager.version>
+		<selenium.version>4.34.0</selenium.version>
 		<testng.version>7.1.0</testng.version>
-		<cucumberjava.version>6.8.0</cucumberjava.version>
-		<cucumberspring.version>6.8.0</cucumberspring.version>
-		<cucumberjunit.version>6.8.0</cucumberjunit.version>
+		<cucumberjava.version>7.2.3</cucumberjava.version>
 	</properties>
 
 
 	<dependencies>
+
+		<dependency>
+			<groupId>org.apache.httpcomponents.client5</groupId>
+			<artifactId>httpclient5</artifactId>
+			<version>5.2.1</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
@@ -56,10 +59,6 @@
 			<artifactId>testng</artifactId>
 			<version>${testng.version}</version>
 		</dependency>
-		<!-- <dependency> <groupId>org.springframework.data</groupId> <artifactId>spring-data-jpa</artifactId> 
-			<version>${spring-data-jpa.version}</version> </dependency> <dependency> 
-			<groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-data-jpa</artifactId> 
-			</dependency> -->
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
@@ -69,13 +68,13 @@
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-junit</artifactId>
-			<version>${cucumberjunit.version}</version>
+			<version>${cucumberjava.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-spring</artifactId>
-			<version>${cucumberspring.version}</version>
+			<version>${cucumberjava.version}</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -89,5 +88,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
