@@ -1,5 +1,6 @@
 package com.springselenium.automation.pages.google;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.springframework.beans.factory.annotation.Value;
@@ -26,6 +27,14 @@ public class GooglePage extends AbstractPage {
 	
 	public void goTo() {
 		driver.get(url);
+	}
+
+	public void search(String search) {
+		searchBox.sendKeys(search);
+	}
+
+	public void clickSearch() {
+		searchBox.sendKeys(Keys.ENTER);
 	}
 	
 	public void quit() {
