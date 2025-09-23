@@ -1,12 +1,12 @@
 package com.springselenium.automation.pages.google;
 
+import com.springselenium.automation.annotation.LazyComponent;
 import com.springselenium.automation.pages.AbstractPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 
-@Component
+@LazyComponent
 public class GooglePage extends AbstractPage {
 
 	@Value("${application.url}")
@@ -32,9 +32,4 @@ public class GooglePage extends AbstractPage {
 	public void clickSearch() {
 		driver.findElement(searchBox).sendKeys(Keys.ENTER);
 	}
-	
-	public void quit() {
-		driver.quit();
-	}
-	
 }
