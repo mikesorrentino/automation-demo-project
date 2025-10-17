@@ -1,22 +1,18 @@
 package com.springselenium.automation.cucumber.steps;
 
-import com.springselenium.automation.pages.nasa.NasaScenario4;
-import com.springselenium.automation.pages.nasa.NasaScenario5;
+import com.springselenium.automation.pages.nasa.NasaHomePage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.Assert;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class NasaScenario5Steps {
 
     @Autowired
-    NasaScenario5 nasaScenario5;
-
-
+    NasaHomePage nasaHomePage;
 
     @When("I iterate nav links")
     public void i_IterateNavLinks() {
-        nasaScenario5.IterateThroughNavLinks();
+        nasaHomePage.IterateThroughNavLinks();
     }
 
     @Then("all pages load successfully")
